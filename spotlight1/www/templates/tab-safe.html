@@ -1,0 +1,34 @@
+<ion-view view-title="Safebox">
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ng-click="logout()">
+            Logout
+        </button>
+    </ion-nav-buttons>
+
+
+
+    <ion-content class="has-header padding" has-tabs="true" on-refresh="onRefresh()">
+        <ion-refresher ng-hide="noData || incomplete" on-refresh="doRefresh('2')"></ion-refresher>
+        <div class="card" ng-repeat="item in list">
+            <div class="item item-text-wrap">
+                <span>
+                    {{ item.item }}
+                </span>
+                <br />  <br />
+                <p class="actions padding">
+                    <i class="ion-trash-b icon-actions margin" ng-click="deleteItem('{{item._id}}')"></i>
+                </p>
+            </div>
+        </div>
+        <div class="card" ng-show="noData">
+            <div class="item item-text-wrap" ng-show="noData || incomplete">
+                <span ng-show="incomplete">
+                    You can have not completed any of your Bucket List items yet. Try harder!!
+                </span>
+                <span ng-show="noData">
+                    No Items in your bucket List.
+                </span>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,30 @@
+<!--
+Create tabs with an icon and label, using the tabs-stable style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-only tabs-royal">
+
+    
+  <!-- Request Tab -->
+  <ion-tab  icon-on="ion-ios-paperplane" icon-off="ion-ios-paperplane-outline" href="#/tab2/reqs">
+    <ion-nav-view name="tab-reqs"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Jobs Tab -->
+  <ion-tab  icon-off="ion-ios-people-outline" icon-on="ion-ios-people" href="#/tab2/jobs">
+    <ion-nav-view name="tab-jobs"></ion-nav-view>
+  </ion-tab>
+
+    <!-- Inbox Tab -->
+    <ion-tab icon-on="ion-ios-browsers" icon-off="ion-ios-browsers-outline" href="#/tab2/inbox">
+        <ion-nav-view name="tab-inbox"></ion-nav-view>
+    </ion-tab>
+
+  <!-- Safe Tab -->
+  <ion-tab  icon-off="ion-ios-filing-outline" icon-on="ion-ios-filing" href="#/tab2/safe">
+    <ion-nav-view name="tab-safe"></ion-nav-view>
+  </ion-tab>
+
+
+</ion-tabs>
